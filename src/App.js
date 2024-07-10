@@ -4,12 +4,12 @@ import TextLogic from './Components/TextLogic';
 import Alert from './Components/Alert';
 import About from './Components/About';
 import { useState } from 'react';
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+// import {
+//   createBrowserRouter,
+//   RouterProvider,
+//   Route,
+//   Link,
+// } from "react-router-dom";
 
 function App() {
 
@@ -56,25 +56,27 @@ function App() {
     }
   }
 
-  const router = createBrowserRouter([
+  // const router = createBrowserRouter([
    
-    {
-      path: "/",
-      element: <><Navbar title="TextUtils" about="About" mode={Mode} toggleMode={tglMode} toggleBlue={tglBlue}/>
-      <Alert alert={alert}/>
-      <TextLogic heading="Enter Your Text" mode={Mode} showAlert={ShowAlert} /></>,
-    },
-    {
-      path: "/about",
-      element: <><Navbar title="TextUtils" about="About" mode={Mode} toggleMode={tglMode} toggleBlue={tglBlue}/>
-      <Alert alert={alert}/>
-      <About /></>,
-    },
-  ]);
+  //   {
+  //     path: "/",
+  //     element: <><Navbar title="TextUtils" about="About" mode={Mode} toggleMode={tglMode} toggleBlue={tglBlue}/>
+  //     <Alert alert={alert}/>
+  //     <TextLogic heading="Enter Your Text" mode={Mode} showAlert={ShowAlert} /></>,
+  //   },
+  //   {
+  //     path: "/about",
+  //     element: <><Navbar title="TextUtils" about="About" mode={Mode} toggleMode={tglMode} toggleBlue={tglBlue}/>
+  //     <Alert alert={alert}/>
+  //     <About /></>
+  //   },
+  // ]);
   return (
    <>
-    
-    <RouterProvider router={router} />
+    <Navbar title="TextUtils" about="About" mode={Mode} toggleMode={tglMode} toggleBlue={tglBlue}/>
+    <Alert alert={alert}/>
+    <TextLogic heading="Enter Your Text" mode={Mode} showAlert={ShowAlert} />
+    {/* <RouterProvider router={router} /> */}
     </>
   );
 }
